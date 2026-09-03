@@ -1,0 +1,5 @@
+# В репозитории всегда LF: иначе на Windows файлы уезжают в CRLF,
+# а sh-скрипты внутри Linux-контейнера с CRLF не запускаются.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
