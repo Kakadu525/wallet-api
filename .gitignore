@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Инструменты
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Локальная конфигурация и секреты
+.env
+.env.local
+
+# IDE / ОС
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Постороннее: не относится к проекту и не должно попасть в репозиторий
+*.exe
+test gr/
