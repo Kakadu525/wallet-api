@@ -1,0 +1,18 @@
+# Оверлей для прогона тестов. Используется вместе с основным файлом:
+#   docker compose -f docker-compose.yml -f docker-compose.test.yml run --rm api-test
+services:
+  api-test:
+    build:
+      context: .
+      args:
+        INSTALL_DEV: "true"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://wallet:wallet@db:5432/wallet_db
+      TEST_DATABASE_URL: postgresql+asyncpg://wallet:wallet@db:5432/wallet_test
+    # Тестов нет в рабочем образе — монтируем.
+    volumes:
+      - ./tests:/app/tests:ro
+    command: ["pytest"]
+    depends_on:
+      db:
+        condition: service_healthy
