@@ -1,5 +1,7 @@
 # Wallet API
 
+[![CI](https://github.com/Kakadu525/wallet-api/actions/workflows/ci.yml/badge.svg)](https://github.com/Kakadu525/wallet-api/actions/workflows/ci.yml)
+
 Асинхронный REST API для операций с балансом кошельков на FastAPI + PostgreSQL.
 
 Поверх операций с балансом: журнал операций, идемпотентность запросов, аутентификация с проверкой владельца, rate limiting и метрики Prometheus.
